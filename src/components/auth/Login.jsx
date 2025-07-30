@@ -1,8 +1,10 @@
 import React from "react";
 import GoogleImg from "../../assets/images/google.png";
 import facebookImg from "../../assets/images/facebook.png";
+import { useNavigate } from "react-router-dom";
 
-const AuthForm = ({ showSignup, setShowSignup }) => {
+const Login = ({ showSignup, setShowSignup }) => {
+  const navigate = useNavigate();
   const handleSignupClick = (e) => {
     e.preventDefault();
     setShowSignup(true);
@@ -56,9 +58,8 @@ const AuthForm = ({ showSignup, setShowSignup }) => {
           <span className="text-sm font-normal text-[#232836]">
             Don't have an account?{" "}
             <a
-              href="#"
-              className="text-[#0171d3] no-underline hover:underline signup-link"
-              onClick={handleSignupClick}
+              className="text-[#0171d3] cursor-pointer no-underline hover:underline signup-link"
+              onClick={()=> {navigate("/signup")}}
             >
               Signup
             </a>
@@ -79,7 +80,7 @@ const AuthForm = ({ showSignup, setShowSignup }) => {
         >
           <img
             src={facebookImg}
-            alt=""
+            alt="facebookImg"
             className="absolute top-1/2 left-[15px] transform -translate-y-1/2 h-[20px] w-[20px] object-cover"
           />
           <span>Login with Facebook</span>
@@ -93,7 +94,7 @@ const AuthForm = ({ showSignup, setShowSignup }) => {
         >
           <img
             src={GoogleImg}
-            alt=""
+            alt="GoogleImg"
             className="absolute top-1/2 left-[15px] transform -translate-y-1/2 h-[20px] w-[20px] object-cover"
           />
           <span className="font-medium opacity-60 text-[#232836]">
@@ -105,4 +106,4 @@ const AuthForm = ({ showSignup, setShowSignup }) => {
   );
 };
 
-export default AuthForm;
+export default Login;

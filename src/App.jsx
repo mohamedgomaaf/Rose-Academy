@@ -4,10 +4,7 @@ import AuthPage from "./pages/AuthPage";
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<h1>Welcome to the Home Page</h1>} />
-        <Route path="/auth" element={<AuthPage />} />
-      </Routes>
+
     </>
   );
 }

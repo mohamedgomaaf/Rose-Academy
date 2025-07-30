@@ -56,8 +56,7 @@ function Register({ showSignup, setShowSignup }) {
           <span className="text-sm font-normal text-[#232836]">
             Already have an account?{" "}
             <a
-              href="#"
-              className="text-[#0171d3] no-underline hover:underline login-link"
+              className="text-[#0171d3] cursor-pointer no-underline hover:underline login-link"
               onClick={handleLoginClick}
             >
               Login
@@ -82,7 +81,7 @@ function Register({ showSignup, setShowSignup }) {
             alt=""
             className="absolute top-1/2 left-[15px] transform -translate-y-1/2 h-[20px] w-[20px] object-cover"
           />
-          <span>Login with Facebook</span>
+          <span>Signup with Facebook</span>
         </a>
       </div>
 
@@ -97,7 +96,7 @@ function Register({ showSignup, setShowSignup }) {
             className="absolute top-1/2 left-[15px] transform -translate-y-1/2 h-[20px] w-[20px] object-cover"
           />
           <span className="font-medium opacity-60 text-[#232836]">
-            Login with Google
+            Signup with Google
           </span>
         </a>
       </div>
