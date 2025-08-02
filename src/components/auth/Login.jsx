@@ -1,21 +1,17 @@
 import React from "react";
-import GoogleImg from "../../assets/images/google.png";
-import facebookImg from "../../assets/images/facebook.png";
+import GoogleImg from "../../../public/images/google.png";
+import facebookImg from "../../../public/images/facebook.png";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({ showSignup, setShowSignup }) => {
+const Login = () => {
   const navigate = useNavigate();
   const handleSignupClick = (e) => {
     e.preventDefault();
-    setShowSignup(true);
+    navigate("/auth/register");
   };
 
   return (
-    <div
-      className={`absolute max-w-[430px] border w-full p-[30px] rounded-md bg-white ${
-        showSignup ? "opacity-0 pointer-events-none" : "opacity-100"
-      }`}
-    >
+    <div className="max-w-[430px] border w-full p-[30px] rounded-md bg-white shadow-lg">
       <div className="w-full">
         <header className="text-[28px] font-semibold text-[#232836] text-center">
           Login
@@ -59,7 +55,7 @@ const Login = ({ showSignup, setShowSignup }) => {
             Don't have an account?{" "}
             <a
               className="text-[#0171d3] cursor-pointer no-underline hover:underline signup-link"
-              onClick={()=> {navigate("/signup")}}
+              onClick={handleSignupClick}
             >
               Signup
             </a>

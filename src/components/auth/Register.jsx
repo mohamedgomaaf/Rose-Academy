@@ -1,18 +1,14 @@
 import React from "react";
-import GoogleImg from "../../assets/images/google.png";
-import facebookImg from "../../assets/images/facebook.png";
-import { useState } from "react";
+import GoogleImg from "../../../public/images/google.png";
+import facebookImg from "../../../public/images/facebook.png";
 
-function Register({ showSignup, setShowSignup }) {
-  const handleLoginClick = (e) => {
-    e.preventDefault();
-    setShowSignup(false);
-  };
+function Register() {
+
 
   return (
     <div
       className={`absolute max-w-[430px] border w-full p-[30px] rounded-md bg-white ${
-        showSignup ? "opacity-100" : "opacity-0 pointer-events-none"
+        true ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
       <div className="w-full">
@@ -57,7 +53,7 @@ function Register({ showSignup, setShowSignup }) {
             Already have an account?{" "}
             <a
               className="text-[#0171d3] cursor-pointer no-underline hover:underline login-link"
-              onClick={handleLoginClick}
+              // onClick={}
             >
               Login
             </a>

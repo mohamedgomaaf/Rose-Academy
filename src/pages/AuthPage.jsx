@@ -1,14 +1,19 @@
-import React, { useState } from "react";
-import Login from "../components/auth/Login";
-import Register from "../components/auth/Register";
+import { Routes, Route } from 'react-router-dom';
+import Login from '../components/auth/Login';
+import Register from '../components/auth/Register';
+import ForgotPassword from '../components/auth/ForgotPassword';
+import ResetPassword from '../components/auth/ResetPassword';
 
 function AuthPage() {
-  const [showSignup, setShowSignup] = useState(false);
-
   return (
-    <div className="min-h-screen w-full flex items-center justify-center gap-[30px]">
-      <Login showSignup={showSignup} setShowSignup={setShowSignup} />
-      <Register showSignup={showSignup} setShowSignup={setShowSignup} />
+    <div className="auth-page">
+      <Routes>
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="forgot-password" element={<ForgotPassword />} />
+        <Route path="reset-password/:token" element={<ResetPassword />} />
+        <Route path="*" element={<Login />} />
+      </Routes>
     </div>
   );
 }
