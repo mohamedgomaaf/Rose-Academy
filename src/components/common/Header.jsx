@@ -68,14 +68,6 @@ const Header = () => {
                   Courses
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link px-3 py-2 text-white font-medium text-base hover:text-pink-500"
-                  to="/auth"
-                >
-                  Connect
-                </Link>
-              </li>
             </ul>
 
             {/* Search Form */}
